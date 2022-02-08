@@ -1,0 +1,41 @@
+<h1>Hola <%= current_user.email %></h1>
+
+<%=link_to "Inicio", root_path %>
+
+<h3>Establecimientos</h3>
+<table class="table table-bordered table-dark">
+    <tr>
+        <th>a</th>
+        <th>ass</th>
+        <%# <table>
+            <tr>
+                <th>e</th>
+                <th>f</th>
+                <th>g</th>
+            </tr>
+        </table> %>
+        <th>b</th>
+        <th>c</th>
+    </tr>
+    <tr>
+        <td id="nested">
+        <table id="tabla2">
+            <tr>
+            <td>celda1</td>
+            <td>celda2</td>
+            <td>celda3</td>
+            </tr>
+        </table>
+        </td>
+        <% @estab_plan.each do |category| %>
+            <td>
+                <%= category %> 
+            </td>
+        <%end%>
+    </tr>
+</table>
+<% @estab_plan.each do |category| %>
+    <span class="badge badge-pill padding">
+        <%= link_to 'aaaa', 'ddd', class:"text-black" %> 
+    </span>
+<%end%>
